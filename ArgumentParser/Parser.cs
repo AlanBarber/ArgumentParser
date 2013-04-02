@@ -70,20 +70,20 @@ namespace ArgumentParser
         /// Parses the specified args.
         /// </summary>
         /// <param name="args">The args.</param>
-        public void Parse(string[] args)
+        public List<Argument> Parse(string[] args)
         {
             SetArguments(args);
-            Parse();
+            return Parse();
         }
 
         /// <summary>
         /// Parses the specified args.
         /// </summary>
         /// <param name="argumentOptions">The argument options.</param>
-        public void Parse(List<object> argumentOptions)
+        public List<Argument> Parse(List<object> argumentOptions)
         {
             SetArgumentOptions(argumentOptions);
-            Parse();
+            return Parse();
         }
 
         /// <summary>
@@ -91,21 +91,26 @@ namespace ArgumentParser
         /// </summary>
         /// <param name="args">The args.</param>
         /// <param name="argumentOptions">The argument options.</param>
-        public void Parse(string[] args, List<object> argumentOptions)
+        public List<Argument> Parse(string[] args, List<object> argumentOptions)
         {
             SetArguments(args);
             SetArgumentOptions(argumentOptions);
-            Parse();
+            return Parse();
         }
 
         /// <summary>
         /// Parses the specified args.
         /// </summary>
-        public void Parse()
+        public List<Argument> Parse()
         {
             // do some stuff
+            return null;
         }
 
+        public void DisplayHelp()
+        {
+            
+        }
 
     }
 }

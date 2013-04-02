@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ArgumentParser;
 
 namespace ArgumentParser.Tests
 {
@@ -79,6 +79,26 @@ namespace ArgumentParser.Tests
 
             test[1] = "YY";
 
+        }
+
+        [TestMethod]
+        public void Test1()
+        {
+            string[] args = new string[4];
+
+            List<Option> options = new List<Option>();
+            options.Add(new Option() {Details = "", LongCode = "", Name = "", ShortCode = ""});
+            
+            Parser parser = new Parser();
+
+            List<Argument> arguments = parser.Parse(args);
+
+            Dictionary<string,Argument> a;
+
+            if()
+
+
+            Assert.IsTrue(true);
         }
     }
 }
